@@ -1,0 +1,47 @@
+*{
+  text-align: center;
+}
+
+div.root{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header{
+  background-color: pink;
+  display: block;
+  height: 20%;
+}
+
+nav{
+  height: 10%;
+  background-color: skyblue;
+  display: block;
+}
+
+div.article{
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+
+  &>div{
+    background-color: blue;
+  }
+}
+section{
+  background-color: pink;
+  width: 80%;
+}
+
+aside{
+  background-color: yellow;
+  width: 20%;
+}
+
+footer{
+  height: 20%;
+  background-color: skyblue;
+  display: block;
+
+}

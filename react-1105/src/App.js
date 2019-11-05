@@ -1,10 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.modules.scss";
 
 function App() {
   return (
-    <div>hell world</div>
+    <div>
+      <div className="root">
+        <header>head</header>
+        <nav>nav</nav>
+        <div className="article">
+          <section>main</section>
+          <aside>aside</aside>
+        </div>
+        <footer>footer</footer>
+      </div>
+    </div>
   );
 }
 
