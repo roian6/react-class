@@ -9,6 +9,7 @@ function App() {
         <header>
           <div>Gmail</div>
           <div>이미지</div>
+          
         </header>
         <section>
           <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="" width="272" height="92"/>
@@ -23,7 +24,10 @@ function App() {
             <button>I'm Feeling Lucky</button>
           </div>
         </section>
-        <footer></footer>
+
+        <footer>
+          
+        </footer>
       </div>
     </div>
   );

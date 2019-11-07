@@ -59,8 +59,27 @@ section{
   margin-top: 36px;
 }
 
-footer{
-  height: 20%;
-  display: block;
+.buttons>button{
+  border-radius: 4px;
+  background-color: #eee;
+  margin: 8px;
+  outline: none;
+  padding: 12px;
+  border:none;
+  border-right:0px; 
+  border-top:0px; 
+  border-left:0px; 
+  border-bottom:0px;
+}
 
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+footer>div{
+  background-color: #ddd;
+  padding: 8px;
+  height: 20%;
 }
