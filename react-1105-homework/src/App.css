@@ -1,0 +1,66 @@
+
+div.root{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header{
+  padding: 16px;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+header>div{
+  font-size: 14px;
+  padding: 8px;
+  display: inline;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+}
+
+.searchBox{
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+  background-color: #fff;
+  padding: 16px;
+  width: 500px;
+  height: 20px;
+  border-radius: 36px;
+  border: 1px solid #ddd;
+}
+
+.searchInput{
+  font-size: 16px;
+  width: 100%;
+  outline: none;
+  border:none;
+  border-right:0px; 
+  border-top:0px; 
+  border-left:0px; 
+  border-bottom:0px;
+}
+
+.material-icons{
+  margin-right: 4px;
+}
+
+.buttons{
+  margin-top: 36px;
+}
+
+footer{
+  height: 20%;
+  display: block;
+
+}

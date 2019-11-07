@@ -24,10 +24,6 @@ div.article{
   height: 60%;
   display: flex;
   flex-direction: row;
-
-  &>div{
-    background-color: blue;
-  }
 }
 section{
   background-color: pink;
