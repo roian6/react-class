@@ -18,7 +18,6 @@ class TodoItem extends React.Component {
     this.setState({
       isEdit: false
     });
-    console.log("buttonOk");
     this.props.change(this.refs.input.value, this.props.index)
   };
 
