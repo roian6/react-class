@@ -29,7 +29,7 @@ const NavTextItem = styled.ul`
     color: #b3b3b3;
   }
   &:active{
-    color: #000;
+    color: #fff;
     font-weight: bold;
   }
 `;
