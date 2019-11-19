@@ -23,8 +23,15 @@ const NavText = styled.ul`
 `;
 
 const NavTextItem = styled.ul`
-  color: white;
+  color: #e5e5e5;
   margin-left: 16px;
+  &:hover {
+    color: #b3b3b3;
+  }
+  &:active{
+    color: #000;
+    font-weight: bold;
+  }
 `;
 
 const NavIcon = styled.ul`
