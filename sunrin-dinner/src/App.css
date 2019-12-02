@@ -1,0 +1,18 @@
+@font-face {
+    font-family: ProductR;
+    src: url("fonts/ProductSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: SquareR;
+    src: url("fonts/nanumsquarer.ttf");
+}
+
+@font-face {
+    font-family: RoundB;
+    src: url("fonts/nanumsquareroundb.ttf");
+}
+*{
+    text-align: center;
+    font-family: SquareR;
+}

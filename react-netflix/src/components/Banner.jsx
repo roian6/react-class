@@ -1,15 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 68px;
   display: flex;
   padding: 16px 36px;
   box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9000;
 `;
 
 const Logo = styled.img`
+  cursor: pointer;
   height: 100%;
   margin-right: 30px;
 `;
@@ -17,36 +25,52 @@ const Logo = styled.img`
 const NavText = styled.ul`
   display: flex;
   list-style: none;
-  height: 100%;
   flex: 1;
   align-items: center;
 `;
 
-const NavTextItem = styled.ul`
+const NavTextItem = styled.li`
+  cursor: pointer;
   color: #e5e5e5;
   margin-left: 16px;
   &:hover {
     color: #b3b3b3;
   }
-  &:active{
-    color: #fff;
+  &.select {
+    color: white;
     font-weight: bold;
+  }
+  a {
+    color: #e5e5e5;
+    text-decoration: none;
   }
 `;
 
 const NavIcon = styled.ul`
-    display: flex;
-    list-style: none;
-    height: 100%;
+  display: flex;
+  list-style: none;
+  height: 100%;
 `;
 
-const NavIconItem = styled.ul`
-    width: fit-content;
-    margin-right: 16px;
-    &>img{
-        height: 80%;
-    }
+const NavIconItem = styled.li`
+  cursor: pointer;
+  height: 100%;
+  width: fit-content;
+  margin-right: 16px;
+  & > img {
+    height: 80%;
+  }
 `;
+
+const setFont = event => {
+  let menu = document.getElementsByClassName("menu");
+  for (let a = 0; a < menu.length; a++) {
+    menu[a].style.fontWeight = "normal";
+    menu[a].style.color = "#e5e5e5";
+  }
+  event.target.style.fontWeight = "bold";
+  event.target.style.color = "#fff";
+};
 
 const Banner = props => {
   return (
@@ -54,24 +78,34 @@ const Banner = props => {
       <Wrapper>
         <Logo src="https://cdn.pixelprivacy.com/wp-content/uploads/2017/12/Netflix-Logo-1024x277.png" />
         <NavText>
-          <NavTextItem>홈</NavTextItem>
-          <NavTextItem>TV 프로그램</NavTextItem>
-          <NavTextItem>영화</NavTextItem>
-          <NavTextItem>최근 추가된 항목</NavTextItem>
-          <NavTextItem>내 리스트</NavTextItem>
+          <NavTextItem className="menu" onClick={setFont}>
+            <Link to="/">홈</Link>
+          </NavTextItem>
+          <NavTextItem className="menu" onClick={setFont}>
+            <Link to="/tv">TV 프로그램</Link>
+          </NavTextItem>
+          <NavTextItem className="menu" onClick={setFont}>
+            영화
+          </NavTextItem>
+          <NavTextItem className="menu" onClick={setFont}>
+            <Link to="/new">최신 등록 콘텐츠</Link>
+          </NavTextItem>
+          <NavTextItem className="menu" onClick={setFont}>
+            내 리스트
+          </NavTextItem>
         </NavText>
 
         <NavIcon>
           <NavIconItem>
-            <img src="/search.svg" alt=""/>
+            <img src="/search.svg" alt="" />
           </NavIconItem>
 
           <NavIconItem>
-            <img src="/gift.svg" alt=""/>
+            <img src="/gift.svg" alt="" />
           </NavIconItem>
 
           <NavIconItem>
-            <img src="/bell.svg" alt=""/>
+            <img src="/bell.svg" alt="" />
           </NavIconItem>
         </NavIcon>
       </Wrapper>

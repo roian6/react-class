@@ -1,29 +1,41 @@
 import React from "react";
+import Banner from "./components/Banner";
 import Main from "./pages/Main";
+import Tv from "./pages/Tv";
+import New from "./pages/New";
 import { createGlobalStyle } from "styled-components";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
-@font-face {
-    font-family: "Material Icons";
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-    src: local("Material Icons"), local("MaterialIcons-Regular"),
-      url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"),
-      url(https://example.com/MaterialIcons-Regular.woff) format("woff"),
-      url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
-  }
 *{
   padding: 0;
   margin: 0;
+}
+body{
+  background-color: black;
 }
 `;
 
 function App() {
   return (
     <>
-      <GlobalStyle/>
-      <Main/>
+      <header>
+        <GlobalStyle />
+        <Router>
+          <Route path="/" exact>
+            <Main />
+          </Route>
+          <Route path="/test" exact>
+            <div style={{ color: "white" }}>test</div>
+          </Route>
+          <Route path="/tv">
+            <Tv />
+          </Route>
+          <Route path="/new">
+            <Tv />
+          </Route>
+        </Router>
+      </header>
     </>
   );
 }

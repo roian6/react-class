@@ -1,10 +1,10 @@
 import React from "react";
 import Preview from "../components/Preview";
-import withLayout from "../components/withLayout";
 import MovieContainer from "../components/MovieContainer";
+import withLayout from "../components/withLayout";
 import axios from "axios";
 
-class Main extends React.Component {
+class Tv extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -54,4 +54,4 @@ class Main extends React.Component {
     );
   }
 }
-export default withLayout(Main);
+export default withLayout(Tv);
